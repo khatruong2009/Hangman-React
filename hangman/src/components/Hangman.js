@@ -52,6 +52,12 @@ function Hangman() {
     ))
   }
 
+  // function showGuessed() {
+  //   return guessed.map((letter) => (
+  //     letter
+  //   )) 
+  // }
+
   //resets the game
   function reset() {
     setMistakes(0);
@@ -74,6 +80,7 @@ function Hangman() {
       <div className="wrong">
         <p>{defaultProps.maxWrong - mistakes} tries left!</p>
         <p>Letters guessed: {guessed}</p>
+        {/* <p>Letters guessed: {showGuessed}</p> */}
       </div>
 
       <div className="image">
