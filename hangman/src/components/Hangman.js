@@ -39,7 +39,6 @@ function Hangman() {
     setGuessed(guessed.add(letter));
     //if a guess is correct, 0 is added to the mistakes 
     setMistakes(mistakes + (answer.includes(letter) ? 0 : 1));
-    guessedWord();
   }
 
   //function to make all the buttons for the letters
@@ -67,6 +66,7 @@ function Hangman() {
 
   //variable used to display buttons
   let gameStat = generateButtons();
+  
   if (isWinner) {
     gameStat = "You Won!";
   }
@@ -92,9 +92,9 @@ function Hangman() {
         <p>{!gameOver ? guessedWord() : answer}</p>
       </div>
 
-      <div className="buttons">
+      <p className="buttons">
         {gameStat}
-      </div>
+      </p>
       
       <button className="reset" onClick={reset}>Reset</button>
     </div>
